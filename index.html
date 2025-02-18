@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade PI</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(0, 0, 0, 0.733);
+        }
+    </style>
+
+    <script>
+        function onPageLoad() {
+            console.log("Esta mensagem está sendo exibida porque foi programada usando JavaScript!");
+        }
+
+        function onButtonClick() {
+            alert("Esta é a mensagem do botão!")
+        }
+
+        function onSelectChange() {
+            const selectedValue = document.getElementById("select").value;
+            alert ("Esta é a mensagem de seleção de opções! Você selecionou o " + selectedValue);
+        }
+    </script>
+</head>
+<body onload="onPageLoad()">
+    <h1>Minha página HTML com eventos em JavaScript!</h1>
+    <main>
+        <div>
+            <p>Clique aqui embaixo para uma surpresa!</p>
+            <button onclick="onButtonClick()">Oi!</button>
+        </div>
+        <br>
+        <div>
+            <label for="select">Escolha uma das opções em baixo.</label>
+            <select id="select" onchange="onSelectChange()">
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Opção 3</option>
+            </select>
+        </div>
+    </main>
+</body>
+</html>
